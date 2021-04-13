@@ -13,7 +13,7 @@ import com.example.nguyenhoanglinh.database.AppDatabase;
 import com.example.nguyenhoanglinh.database.ProductEntity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    private EditText edName, edQty;
+    private EditText edName,edQty;
     private Button btAdd,btView;
     AppDatabase db;
     @Override
