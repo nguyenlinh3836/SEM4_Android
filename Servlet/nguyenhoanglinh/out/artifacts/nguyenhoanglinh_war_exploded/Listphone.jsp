@@ -17,8 +17,8 @@
     <tr>
         <th>ID</th>
         <th>Name</th>
-        <th>Image</th>
         <th>Price</th>
+        <th>Description</th>
         <th>Brand</th>
     </tr>
     </thead>
@@ -26,7 +26,7 @@
     <c:forEach var="p" items="${requestScope.phones}">
         <tr>
             <td>${p.id}</td>
-            <td>${p.name}</td>
+            <td>${p.phone_name}</td>
             <td>${p.price}</td>
             <td>${p.des}</td>
             <td>${p.brand}</td>

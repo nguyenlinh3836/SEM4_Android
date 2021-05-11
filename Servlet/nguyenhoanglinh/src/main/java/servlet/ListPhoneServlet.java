@@ -19,8 +19,8 @@ public class ListPhoneServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<PhoneEntity> phones = getAll();
-       request.setAttribute("phones", phones);
-        request.getRequestDispatcher("Listphone.jsp").forward(request, response);
+        request.setAttribute("phones", phones);
+        request.getRequestDispatcher("listphone.jsp").forward(request, response);
     }
     private List<PhoneEntity> getAll(){
         PhoneDao dao = new PhoneDao();
