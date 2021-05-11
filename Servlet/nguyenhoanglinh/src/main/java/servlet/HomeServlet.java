@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 
-@WebServlet(name = "HomeServlet",urlPatterns = {"/addphone"})
+@WebServlet(name = "HomeServlet",urlPatterns = {""})
 public class HomeServlet extends HttpServlet {
     PhoneDao dao = new PhoneDao();
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -35,7 +35,7 @@ public class HomeServlet extends HttpServlet {
         String des = request.getParameter("des");
         PhoneEntity phones = new PhoneEntity(name,price,des,brand);
         dao.insertProduct(phones);
-        response.sendRedirect("addphone");
+        response.sendRedirect("");
     }
 
 
