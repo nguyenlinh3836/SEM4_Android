@@ -35,7 +35,7 @@ public class HomeServlet extends HttpServlet {
         String des = request.getParameter("des");
         PhoneEntity phones = new PhoneEntity(name,price,des,brand);
         dao.insertProduct(phones);
-        response.sendRedirect("/addphone");
+        response.sendRedirect("addphone");
     }
 
 

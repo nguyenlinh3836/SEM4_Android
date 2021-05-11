@@ -24,6 +24,7 @@ public class ListPhoneServlet extends HttpServlet {
     }
     private List<PhoneEntity> getAll(){
         PhoneDao dao = new PhoneDao();
-        return dao.getAll();
+        List<PhoneEntity> phones = dao.getAll();
+        return phones;
     }
 }
