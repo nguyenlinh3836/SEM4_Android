@@ -16,34 +16,33 @@ public class ProductController {
     ProductService productService;
 
     @GetMapping
-    public BaseResponse getProduct(@RequestParam Map<String, String> params){
+    public BaseResponse getProduct(@RequestParam Map<String, String> params) {
         BaseResponse res = new BaseResponse();
         String name = params.get("name");
         String id = params.get("id");
-        if(name != null){
+        if (name != null) {
             res.data = productService.getProductByNameCustom(name);
-        } else if(id != null) {
+        } else if (id != null) {
             res.data = productService.getProductById(Integer.parseInt(id));
-        } else  {
+        } else {
             res.data = productService.getAllProduct();
         }
         return res;
     }
 
     @PostMapping
-    public BaseResponse createProduct(@RequestBody ProductEntity p){
+    public BaseResponse createProduct(@RequestBody ProductEntity p) {
         BaseResponse res = new BaseResponse();
         res.data = productService.createProduct(p);
         return res;
     }
 
     @PutMapping
-    public BaseResponse updateProduct(@RequestBody ProductEntity p){
+    public BaseResponse updateProduct(@RequestBody ProductEntity p) {
         BaseResponse res = new BaseResponse();
         res.data = productService.updateProduct(p);
         return res;
     }
-
 
 
 }

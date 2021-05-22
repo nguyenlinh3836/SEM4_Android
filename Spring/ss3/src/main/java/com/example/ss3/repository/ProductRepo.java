@@ -6,8 +6,9 @@ import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
 
-public interface ProductRepo extends JpaRepository<ProductEntity,Integer> {
+public interface ProductRepo extends JpaRepository<ProductEntity, Integer> {
     ProductEntity findByName(String name);
+
     @Query("select p from ProductEntity p where p.name like %:name%")
     List<ProductEntity> findProductByNameCustom(String name);
 }
