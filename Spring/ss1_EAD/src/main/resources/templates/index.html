@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+    <!-----css---->
+    <link th:href="@{/css/bootstrap.css}" rel="stylesheet"/>
+    <!-----js---->
+    <script th:src="@{/js/min.js}"></script>
+
+</head>
+<body>
+<section class="container">
+    <h1>Choose your Option</h1>
+    <a th:href="@{/adduser}" class="btn btn-success">Add User</a>
+    <a th:href="@{/listuser.html}" class="btn btn-dark">List User</a>
+</section>
+
+</body>
+</html>
