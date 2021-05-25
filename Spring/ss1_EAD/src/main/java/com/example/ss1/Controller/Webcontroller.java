@@ -19,8 +19,6 @@ public class Webcontroller {
 
     @GetMapping({"/", "index"})
     public String index(Model model) {
-        String mes = "Hello Spring boot + thymeleaf";
-        model.addAttribute("message", mes);
         return "index";
     }
 

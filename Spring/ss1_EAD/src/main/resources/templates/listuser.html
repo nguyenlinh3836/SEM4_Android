@@ -10,9 +10,12 @@
 
 </head>
 <body>
-
-<table class="table">
-    <thead>
+<section class="container">
+<table class="table table-striped">
+    <h1> List User</h1>
+    <a th:href="@{/index}" class="btn btn-success m-1">Home</a>
+    <a th:href="@{/adduser}" class="btn btn-primary m-1">Add User</a>
+    <thead class="thead-dark">
     <tr>
         <th scope="col">#</th>
         <th scope="col">Name</th>
@@ -30,6 +33,7 @@
 
     </tbody>
 </table>
+</section>
 
 </body>
 
