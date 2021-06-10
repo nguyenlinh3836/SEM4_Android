@@ -10,4 +10,5 @@ public interface ProductService {
     List<ProductEntity> getProductByName(String name, Pageable pageable);
     List<ProductEntity> getAllProduct(Pageable pageable);
     Page<ProductEntity> findPaginated(int pageNo, int pageSize);
+
 }

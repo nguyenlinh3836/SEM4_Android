@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/template.html}">
+<head>
+    <meta charset="UTF-8">
+    <title>List All</title>
+</head>
+<body>
+<div layout:fragment="content" class="container">
+    <a class="btn btn-primary" th:href="@{/Create}">Create New</a>
+    <table class="table" >
+        <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="product :${products}">
+            <th scope="row" th:text="${product.id}"></th>
+            <td th:text="${product.name}"></td>
+            <td th:text="${product.price}"></td>
+            <td th:text="${product.quantity}"></td>
+            <td>
+                <a class="btn btn-success" th:href="@{/edit/{id}(id=${product.id})}">Update</a>
+                <a class="btn btn-danger" th:href="@{'/delete/' + ${product.id}}">Delete</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <nav aria-label="Page navigation">
+        <ul class="pagination">
+            <li th:if="${totalPage > 0}" class="page-item" th:each="t : ${#numbers.sequence( 0, (totalPage - 1)/1)}" th:classappend="${t==page} ? active">
+                <a class="page-link" th:href="@{/list(size=${size}, page=${t})}" th:text="${t+1}"></a>
+            </li>
+        </ul>
+    </nav>
+</div>
+</body>
+</html>
