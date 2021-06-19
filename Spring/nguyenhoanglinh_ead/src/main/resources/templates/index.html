@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>ListBook</title>
+    <link th:href="@{/css/bootstrap.css}" rel="stylesheet">
+    <script th:src="@{/js/bootstrap.js}"></script>
+</head>
+<body>
+<a href="/create" class="btn btn-success">Create</a>
+<nav class="navbar navbar-light bg-light">
+    <form class="form-inline">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+</nav>
+<table class="table" >
+    <thead>
+    <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Publisher</th>
+        <th scope="col">Author</th>
+        <th scope="col">Genre</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="book :${books}">
+        <th scope="row" th:text="${book.name}"></th>
+        <td th:text="${book.publisher}"></td>
+        <td th:text="${book.author}"></td>
+        <td th:text="${book.genre}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Add</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--css-->
+    <link th:href="@{/css/bootstrap.css}" rel="stylesheet" />
+    <!--js-->
+    <script th:src="@{/js/min.js}"></script>
+
+</head>
+<body>
+<div class="container">
+    <form method="post" action="/add">
+        <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" class="form-control" id="name" name="name">
+        </div>
+        <div class="form-group">
+            <label for="author">Author</label>
+            <input type="text" class="form-control" id="author" name="author">
+        </div>
+        <div class="form-group">
+            <label for="genre">Genre</label>
+            <input type="text" class="form-control" id="genre" name="genre">
+        </div>
+        <div class="form-group">
+            <label for="publisher">Publisher</label>
+            <select class="form-select" aria-label="Publisher" id="publisher" name="publisher" th:each="publisher:${publishers}">
+                <option th:value="${publisher.id}" th:text="${publisher.name}">Male</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary m-2">Create</button>
+    </form>
+</div>
+</body>
+</html>

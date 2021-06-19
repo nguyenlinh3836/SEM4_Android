@@ -8,6 +8,5 @@ public interface StudentService {
     List<StudentEntity> getAllStudent();
     StudentEntity create(StudentEntity p);
     StudentEntity update(StudentEntity p);
-    void 
-
+    void delete(int id);
 }

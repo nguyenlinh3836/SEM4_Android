@@ -19,7 +19,7 @@ public class StudentEntity {
     @Column(name = "phone")
     private String phone;
     @Column(name = "birthday")
-    private Date birthday;
+    private String birthday;
     @Column(name = "country")
     private String country;
 
@@ -63,11 +63,11 @@ public class StudentEntity {
         this.phone = phone;
     }
 
-    public Date getBirthday() {
+    public String getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(Date birthday) {
+    public void setBirthday(String birthday) {
         this.birthday = birthday;
     }
 
