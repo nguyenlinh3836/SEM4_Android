@@ -1,0 +1,17 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="SS5-JDBC:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/SS5_JDBC_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="NSC/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="NSC" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="mysql-connector-java-5.1.49" />
+          <element id="library" level="project" name="jstl-1.2" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
